@@ -1,88 +1,64 @@
 # Ex.No:5(C)    GETTER AND SETTER METHOD
 
 ## AIM:
-To Create a java program to print fibonacci series for given number , to read and display the value with the help of setter and getter method.
+To Create a java program to print the sum of two number using getter and setter method.
 
 ## ALGORITHM :
-1. Start the program and import Scanner to take user input.
-
-2. Create a Fibonacci class with:
-
-3. A private int variable count.
-
-   Methods setCount(int) to set the number of terms and getCount() to retrieve it.
-   
-   A printSeries() method to generate and print the Fibonacci series using a loop.
-
-4. In the Main class:
-
-   Create a Scanner object and a Fibonacci object.
-   
-   Read an integer input from the user to decide how many terms to generate.
-   
-   Set the count in the Fibonacci object and call printSeries() to display the series.
-
-5. Close the Scanner and end the program.
+1.  Start the Program
+2.	Define class `Employee`:
+-	a) Private variables `n1` and `n2`
+-	b) Method `setsum(int n1, int n2)` to set values of `n1` and `n2`
+-	c) Method `getsum()` to calculate and print `sum = n1 + n2`
+3.	In `main` class `main` method:
+-	a) Use `Scanner` to read integers `n1` and `n2`
+-	b) Create ` Employee ` object, set values, and call `getsum()`
+4.	End
 
 
 ## PROGRAM:
  ```
-/*
 Program to implement a Getter and Setter using Java
 Developed by: Mohamed Zabir Khan A
 RegisterNumber: 212224230162
-*/
 ```
 
 ## Sourcecode.java:
-```java
-import java.util.Scanner;
+```
+import java.util.*;
+public class SetAndGet {
+private String a;
+private String b;
 
-class Fibonacci {
-    private int count;
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void printSeries() {
-        int n1 = 0, n2 = 1;
-        for (int i = 0; i < count; i++) {
-            System.out.print(n1 + " ");
-            int next = n1 + n2;
-            n1 = n2;
-            n2 = next;
-        }
-    }
+public void getadd() {
+    int a1=Integer.parseInt(a);
+    int b1=Integer.parseInt(b);
+	System.out.print("Sum is " + (a1+b1)); 
+	
+}
+public void setadd(String a,String b) {
+ this.a =a;
+ this.b=b;
 }
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Fibonacci fib = new Fibonacci();
-
-        int input = sc.nextInt();
-        fib.setCount(input);
-        fib.printSeries();
-
-        sc.close();
-    }
+public static void main(String args[]){
+ Scanner sc=new Scanner(System.in);
+ SetAndGet obj = new SetAndGet();
+ String str=sc.nextLine();
+ String str1=sc.nextLine();
+ 
+ obj.setadd(str,str1);
+ 
+ obj.getadd();
+}
 }
 ```
 
 ## OUTPUT:
 
-![image](https://github.com/user-attachments/assets/3f2c59a9-3be2-4162-af36-f7a26eb2f318)
-
+![image](https://github.com/user-attachments/assets/ad891b8f-63c2-4dac-afaa-a6d8e5c46519)
 
 ## RESULT:
-Thus the java program to print fibonacci series for given number , to read and display the value with the help of setter and getter method.was executed successfully.
-
-
+Thus the java program to print the sum of two number using getter and setter method was executed successfully.
 
 
 
